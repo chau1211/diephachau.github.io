@@ -106,14 +106,14 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
 	if(this.name == 'Tuấn'){
 		$(t).html(this.name + " nói:\n"+'"Chúc mừng sinh nhật Châu nhá"');
 		this.gender = "Đực";
-	} else if(this.name == 'Bũm') {
-		$(t).html(this.name + " sẽ:\n"+'"Luôn vui vẻ nhá"');
+	} else if(this.name == 'bé Bũm') {
+		$(t).html(this.name + " phải:\n"+'"Luôn luôn vui vẻ nhá"');
 		this.gender = "Cái";
 	} else if(this.name == 'à ùm...') {
-		$(t).html(this.name + " thì:\n"+'"Vẫn sẽ xinh đẹp nữaa!"');
+		$(t).html(this.name + " thì Châu:\n"+'"Phải tiếp tục xinh đẹp nữaa!"');
 		this.gender = "Đực";
 	} else {
-		$(t).html(this.name + " Và:\n"+'"Mọi thứ đều phải Ô kê hết ..."');
+		$(t).html(  + " Châu Ngốc:\n"+'"Châu Ngốc...Chúc sinh nhật zui zẻ nhé !"');
 		this.gender = "Cái";
 	}
 	

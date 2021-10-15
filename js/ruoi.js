@@ -103,27 +103,32 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
 	t.style.borderRadius = '3px';
 	t.style.boxShadow = '1px 1px 2px 1px #222222';
 	t.style.display = 'none';
-	if(this.name == 'Tuấn'){
-		$(t).html(this.name + " nói:\n"+'"Chúc mừng sinh nhật Châu nhá"');
+	if(this.name == 'Nhạc Bất Ruồi'){
+		$(t).html(this.name + " nói:\n"+'"Mong Châu vẫn mãi nở nụ cười thật tươi trên môi nhé! "');
 		this.gender = "Đực";
-	} else if(this.name == 'bé Bũm') {
-		$(t).html(this.name + " phải:\n"+'"Luôn luôn vui vẻ nhá"');
+		//ruồi nâu
+	} else if(this.name == 'Lý Mạc Ruồi') {
+		$(t).html(this.name + " nói:\n"+'"Chúc Châu luôn luôn xinh đẹp như mọi khi nè."');
 		this.gender = "Cái";
-	} else if(this.name == 'à ùm...') {
-		$(t).html(this.name + " thì Châu:\n"+'"Phải tiếp tục xinh đẹp nữaa!"');
+		//ruồi đen
+	} else if(this.name == 'Độc Cô Ruồi') {
+		$(t).html(this.name + " nói:\n"+'"Cuộc sống sau có khó khăn Châu vẫn phải cố gắng vượt qua nha!"');
 		this.gender = "Đực";
+		//ruồi đỏ
 	} else {
-		$(t).html(  + " Châu Ngốc:\n"+'"Châu Ngốc...Chúc sinh nhật zui zẻ nhé !"');
+		$(t).html(this.name + " nói:\n"+'"Tiểu Châu à! Trò mà hư sẽ ko đc Gia sư tặng quà đâu nha."');
 		this.gender = "Cái";
+		//ruồi xanh
 	}
 	
+	//thời gian hiện khung nói 
 	var timeFlySay = 0;
 	var flySay = setInterval(function() {
 		timeFlySay++;
 		if(timeFlySay == 10) {
 			t.style.display = 'block';
 		}
-		if(timeFlySay == 20) {
+		if(timeFlySay == 50) {
 			t.style.display = 'none';
 			timeFlySay = 0;
 			clearInterval(flySay);
@@ -152,45 +157,22 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
 		parent.hasclick = true;
 		parent.stop();
 		setTimeout(function(){
-			// var value_message = Math.floor(Math.random() * 10) + 1;
-			// switch (value_message) { 
-			// 	case 1: 
-			// 		$(t).html(parent.name + " nói:\n"+'"i za..Huynh à! Huynh đang cười Muội đó, có biết không hả !"')
-			// 		break;
-			// 	case 2: 
-			// 		// $(t).html(parent.name + " nói:\n"+'"Ngươi đã tuyệt tình, cũng đừng trách ta bất nghĩa. Ngày này năm sau sẽ là ngày giỗ của ngươi"')
-			// 		$(t).html(parent.name + " nói:\n"+'"Chung quy 16 năm hẹn ước.. Tình này vẫn trọn theo thời gian."')
-			// 		break;
-			// 	case 3: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Cho dù ngươi chiếm được thân xác ta nhưng mãi cũng không chiếm được tâm hồn ta."')
-			// 		break;
-			// 	case 4: 
-			// 		// $(t).html(parent.name + " nói:\n"+'"Đa tình tự cổ không dư hận... Dĩ hận miên miên vô tuyệt kỳ."')
-			// 		$(t).html(parent.name + " nói:\n"+'"Ta ở dưới đáy Tuyệt tình cốc.."')
-			// 		break;
-			// 	case 5: 
-			// 		// $(t).html(parent.name + " nói:\n"+'"Đè em cũng được nhưng nhớ bo nha a !"')
-			// 		$(t).html(parent.name + " nói:\n"+'"Chung Nam Sơn hậu. Hoạt Tử Nhân mộ. Thần Điêu Hiệp Lữ. Tuyệt tích giang hồ."')
-			// 		break;
-			// 	case 6: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Lại là ngươi. Nhà ngươi có biến thành tro ta cũng nhận ra."')
-			// 		break;
-			// 	case 7: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Đất có thổ công, sông có hà bá. Đường này do ta mở. Ta muốn bò đâu ta bò."')
-			// 		break;
-			// 	case 8: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Phóng hạ đồ đao, lập địa thành phật. Chân lý đơn giản vậy lẽ nào đại hiệp lại ko hiểu."')
-			// 		break;
-			// 	case 9: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Buông ta ra con tiện tỳ này !"')
-			// 		break;
-			// 	case 10: 
-			// 		$(t).html(parent.name + " nói:\n"+'"Đừng mà. Thiếp đang mang trong mình cốt nhục của chàng..."')
-			// 		break;																					
-			// }
-			// if(parent.hasclick){				
-			// 	$(t).fadeIn(200);				
-			// }
+			var value_message = Math.floor(Math.random() * 3) + 1;
+			switch (value_message) { 
+				case 1: 
+					$(t).html(parent.name + " nói:\n"+'"Haha đồ Ngốc ta sắp dc hồi sinh rồi!"')
+					break;
+				
+				case 2: 
+					$(t).html(parent.name + " nói:\n"+'"Thì ra con Ngốc nhà ngươi đã giết ta... Ta hậnnnn"')
+					break;
+				case 3: 
+					$(t).html(parent.name + " nói:\n"+'"Lêu lêu đồ Ngốc... Baka"')
+					break;																				
+			}
+			if(parent.hasclick){				
+				$(t).fadeIn(200);				
+			}
 		}, 500);
 		if(parent.died) {
 			setTimeout(function(){
@@ -255,7 +237,7 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
 			hasswatter = false;
 			parent.stop();
 			parent.died = true;
-			f.title = "Ấn vào giữ 5s để hồi sinh em đi chị Châu ...!";
+			f.title = "Ấn vào giữ 5s để hồi sinh em đi nà... iuuu !";
 		} else {
 			if (Math.random() < 0.3) {
 				f.style.cursor = 'url("https://redirect.nhq.vn/demo/js/images/flyswatter.png"), auto';
@@ -570,16 +552,16 @@ $(document).ready(function() {
 				// Object Fly("ID", "Type", "Color", move_space_height, move_space_width, position_x, position_y, "flies_image_url");
 				switch (value) { 
 					case 1: 
-						var fly = new Fly("test", "Nhặng", "Xanh", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_11.png");
+						var fly = new Fly("test", "Nhặng", "Xanh", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_11.png", "Tiểu Long Ruồi", "Cổ Mộ");
 						break;
 					case 2:
-					 	var fly = new Fly("test", "Ruồi", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png");						
+					 	var fly = new Fly("test", "Ruồi", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "Lý Mạc Ruồi", "Cổ Mộ");						
 					 	break;
 					case 3: 
-					 	var fly = new Fly("test", "Ruồi", "Đỏ", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/doc_co_ruoi.png");		
+					 	var fly = new Fly("test", "Ruồi", "Đỏ", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/doc_co_ruoi.png", "Độc Cô Ruồi", "Tiêu Dao");		
 					 	break;
 					case 4: 
-						var fly = new Fly("test", "Nhặng", "Nâu", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_9.png");		
+						var fly = new Fly("test", "Nhặng", "Nâu", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_9.png", "Nhạc Bất Ruồi", "Hoa Sơn");		
 						break;
 							
 				}
@@ -591,7 +573,7 @@ $(document).ready(function() {
 			if(var_2){
 				if (Math.random() < show_percent_fly2/100) {
 					//console.log('fly 2 appear');
-					var fly2 = new Fly("test", "Nhặng", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png");	
+					var fly2 = new Fly("test", "Nhặng", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "Lý Mạc Ruồi", "Cổ Mộ");	
 					fly2.move();
 					fly2.flying();
 					fly2.set_random_goaway(max_goaway_time);	

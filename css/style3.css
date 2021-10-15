@@ -380,9 +380,35 @@ audio {
 	position: absolute;
 	z-index: 1;
 }
-.mhn-player .chauu{
-	color: rgb(0, 231, 0);
-}
+/* .mhn-player .chauu h2{
+	margin-top: 2px; 
+	color: rgb(0, 231, 0); 
+	text-align: center;
+} */
+.mhn-player .typewriter h2 {
+	color: rgb(13, 241, 70);
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin-top: 2px ; /* Gives that scrolling effect as the typing happens */
+	 /* Adjust as needed */
+	animation: 
+	  typing 3.5s steps(30, end),
+	  blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange }
+  }
+
 .mhn-player .album-art,
 .mhn-player .album-thumb{
 	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI5MC4zMTNweCIgaGVpZ2h0PSI5MC4zMTNweCIgdmlld0JveD0iMCAwIDkwLjMxMyA5MC4zMTMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkwLjMxMyA5MC4zMTMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjMTkxOTE5IiBkPSJNNDUuMTU2LDBDMjAuMjE4LDAsMCwyMC4yMTcsMCw0NS4xNTZjMCwyNC45MzksMjAuMjE4LDQ1LjE1Niw0NS4xNTYsNDUuMTU2YzI0LjkzOSwwLDQ1LjE1Ni0yMC4yMTgsNDUuMTU2LTQ1LjE1NkM5MC4zMTMsMjAuMjE3LDcwLjA5NSwwLDQ1LjE1NiwweiBNMjIuMzk3LDc4Ljc1M2MwLDAtNS4yNzQtMy41NC03LjIyNS01Ljc4Yy0xLjk1MS0yLjI0LTMuOTc0LTQuNjk2LTMuOTc0LTQuNjk2TDI2LjAxLDU4LjE2MWw1Ljc4LDUuNzhsMC4zNjIsMC4zNjFMMjIuMzk3LDc4Ljc1M3ogTTQ1LjE1Niw2My4yMTljLTkuOTc2LDAtMTguMDYzLTguMDg3LTE4LjA2My0xOC4wNjNjMC05Ljk3NSw4LjA4Ny0xOC4wNjMsMTguMDYzLTE4LjA2M2M5Ljk3NSwwLDE4LjA2Myw4LjA4NywxOC4wNjMsMTguMDYzQzYzLjIxOSw1NS4xMzIsNTUuMTMyLDYzLjIxOSw0NS4xNTYsNjMuMjE5eiBNNjQuMzAzLDMyLjUxM2MwLDAtMC42NjItMS4yMDQtMi4xNjctMi44OWMtMS41MDUtMS42ODYtMy45NzQtMy45NzQtMy45NzQtMy45NzRsMTAuMTE1LTE0LjQ1YzAsMCwyLjQwOCwxLjc0Niw0LjY5NiwzLjYxMmMyLjI4OCwxLjg2Nyw2LjE0MSw3LjIyNSw2LjE0MSw3LjIyNUw2NC4zMDMsMzIuNTEzeiBNNDUuMTU2LDQxLjE4MmMtMi4xOTUsMC0zLjk3NCwxLjc3OS0zLjk3NCwzLjk3NGMwLDIuMTk1LDEuNzc5LDMuOTc0LDMuOTc0LDMuOTc0YzIuMTk1LDAsMy45NzQtMS43NzksMy45NzQtMy45NzRDNDkuMTMsNDIuOTYxLDQ3LjM1MSw0MS4xODIsNDUuMTU2LDQxLjE4MnoiLz48L2c+PC9nPjwvc3ZnPg==) no-repeat center / 50%;

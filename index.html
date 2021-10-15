@@ -1,264 +1,397 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="vi">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Happy Birthday Puppy</title>
-	<link rel="shortcut icon" href="./img/dog.png"/>
-	<meta name="description" content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3" />
-	<meta property="og:description" content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3" />
-	<meta property="og:image" content="https://redirect.nhq.vn/demo/screenshot.png" />
-	<script type="text/javascript" nonce="6e13c9d76bc4482483061edecb1" src="//local.adguard.org?ts=1634111808204&amp;type=content-script&amp;dmn=redirect.nhq.vn&amp;app=com.operasoftware.Opera&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
-<script type="text/javascript" nonce="6e13c9d76bc4482483061edecb1" src="//local.adguard.org?ts=1634111808204&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="stylesheet" href="css/style3.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="./css/all.min.css">
-<link rel="stylesheet" href="/css/bg/">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Happy Birthday Puppy</title>
+		<link rel="shortcut icon" href="./img/dog.png" />
+		<meta
+			name="description"
+			content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3"
+		/>
+		<meta
+			property="og:description"
+			content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3"
+		/>
+		<meta
+			property="og:image"
+			content="https://redirect.nhq.vn/demo/screenshot.png"
+		/>
+		<script
+			type="text/javascript"
+			nonce="6e13c9d76bc4482483061edecb1"
+			src="//local.adguard.org?ts=1634111808204&amp;type=content-script&amp;dmn=redirect.nhq.vn&amp;app=com.operasoftware.Opera&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"
+		></script>
+		<script
+			type="text/javascript"
+			nonce="6e13c9d76bc4482483061edecb1"
+			src="//local.adguard.org?ts=1634111808204&amp;name=AdGuard%20Extra&amp;type=user-script"
+		></script>
+		<link
+			rel="stylesheet"
+			href="css/style3.css"
+			type="text/css"
+			media="screen"
+		/>
+		<link rel="stylesheet" href="./css/all.min.css" />
+		<link rel="stylesheet" href="/css/bg/" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+		/>
 
-
-
-	
-	<script type="text/javascript" charset="utf-8">
-	function hasClassName(inElement, inClassName)
-	{
-		var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
-		return regExp.test(inElement.className);
-	}
-
-	function addClassName(inElement, inClassName)
-	{
-		if (!hasClassName(inElement, inClassName))
-			inElement.className = [inElement.className, inClassName].join(' ');
-	}
-
-	function removeClassName(inElement, inClassName)
-	{
-		if (hasClassName(inElement, inClassName)) {
-			var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-			var curClasses = inElement.className;
-			inElement.className = curClasses.replace(regExp, ' ');
-		}
-	}
-
-	function toggleClassName(inElement, inClassName)
-	{
-		if (hasClassName(inElement, inClassName))
-			removeClassName(inElement, inClassName);
-		else
-			addClassName(inElement, inClassName);
-	}
-
-	function toggleShape()
-	{
-		var shape = document.getElementById('shape');
-		if (hasClassName(shape, 'cube') || hasClassName(shape, 'autoLoad')) {
-			if (hasClassName(shape, 'cube')) {
-				removeClassName(shape, 'cube');
+		<script type="text/javascript" charset="utf-8">
+			function hasClassName(inElement, inClassName) {
+				var regExp = new RegExp("(?:^|\\s+)" + inClassName + "(?:\\s+|$)");
+				return regExp.test(inElement.className);
 			}
-			if (hasClassName(shape, 'autoLoad')) {
-				removeClassName(shape, 'autoLoad');
-			}
-			addClassName(shape, 'ring');
-		} else {
-			removeClassName(shape, 'ring');
-			addClassName(shape, 'cube');
-		}
 
-		var stage = document.getElementById('stage');
-		if (hasClassName(shape, 'ring'))
-			stage.style.webkitTransform = 'translateZ(-200px)';
-		else
-			stage.style.webkitTransform = '';
-	}
-	
-	function downloadLink()
-    {
-		location.href = 'https://www.messenger.com/t/100013878965216';
-    }
-	
-	var count = 0;
-	var num_bg = 1;
-	var next_bg = 0;
-	var preLoadbg;
-	
-	function timedCount()
-	{
-		if(count >= 8) {
-			count = 0;
-			autoLoad();
-		} else {
-			count = count + 1;
-		}
-		if(next_bg >= 15) {
-			num_bg = num_bg + 1;
-			if(num_bg > 10) {
-				num_bg = 1;
+			function addClassName(inElement, inClassName) {
+				if (!hasClassName(inElement, inClassName))
+					inElement.className = [inElement.className, inClassName].join(" ");
 			}
-			document.body.style.backgroundImage = "url(css/bg/" + num_bg + ".jpg)";
-			preLoadbg = new Image();
-			if(num_bg == 10) {
-				preLoadbg.src = "css/bg/1.jpg";
-			} else {
-				preLoadbg.src = "css/bg/" + (num_bg + 1) + ".jpg";
+
+			function removeClassName(inElement, inClassName) {
+				if (hasClassName(inElement, inClassName)) {
+					var regExp = new RegExp(
+						"(?:^|\\s+)" + inClassName + "(?:\\s+|$)",
+						"g"
+					);
+					var curClasses = inElement.className;
+					inElement.className = curClasses.replace(regExp, " ");
+				}
 			}
-			next_bg = 0;
-		} else {
-			next_bg = next_bg + 1;
-		}
-		setTimeout(timedCount, 1000);
-	}
-	
-	function autoLoad()
-	{
-		var shapeTest = document.getElementById('shape');
-		if (hasClassName(shapeTest, 'cube')) {
-			removeClassName(shapeTest, 'cube');
-			addClassName(shapeTest, 'autoLoad');
-		} else {
-			toggleShape();
-		}
-	}
-	</script>
-	<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="./js/snow.js"></script>
-	<script type="text/javascript" src="./js/ruoi.js"></script>
-	<script type="text/javascript" src="./js/player.js"></script>
-</head>
-<body onload="timedCount()">
-	<div id="container">
-		<div id="stage">
-			<div id="shape" class="cube backfaces">
-				<div class="plane one"></div>
-				<div class="plane two" ></div>
-				<div class="plane three"></div>
-				<div class="plane four"></div>
-				<div class="plane five"></div>
-				<div class="plane six"></div>
-				<div class="plane seven"></div>
-				<div class="plane eight"></div>
-				<div class="plane nine"></div>
-				<div class="plane ten"></div>
-				<div class="plane eleven"></div>
-				<div class="plane twelve"></div>
+
+			function toggleClassName(inElement, inClassName) {
+				if (hasClassName(inElement, inClassName))
+					removeClassName(inElement, inClassName);
+				else addClassName(inElement, inClassName);
+			}
+
+			function toggleShape() {
+				var shape = document.getElementById("shape");
+				if (hasClassName(shape, "cube") || hasClassName(shape, "autoLoad")) {
+					if (hasClassName(shape, "cube")) {
+						removeClassName(shape, "cube");
+					}
+					if (hasClassName(shape, "autoLoad")) {
+						removeClassName(shape, "autoLoad");
+					}
+					addClassName(shape, "ring");
+				} else {
+					removeClassName(shape, "ring");
+					addClassName(shape, "cube");
+				}
+
+				var stage = document.getElementById("stage");
+				if (hasClassName(shape, "ring"))
+					stage.style.webkitTransform = "translateZ(-200px)";
+				else stage.style.webkitTransform = "";
+			}
+
+			function downloadLink() {
+				location.href = "https://www.messenger.com/t/100013878965216";
+			}
+
+			var count = 0;
+			var num_bg = 1;
+			var next_bg = 0;
+			var preLoadbg;
+
+			function timedCount() {
+				if (count >= 8) {
+					count = 0;
+					autoLoad();
+				} else {
+					count = count + 1;
+				}
+				if (next_bg >= 15) {
+					num_bg = num_bg + 1;
+					if (num_bg > 10) {
+						num_bg = 1;
+					}
+					document.body.style.backgroundImage =
+						"url(css/bg/" + num_bg + ".jpg)";
+					preLoadbg = new Image();
+					if (num_bg == 10) {
+						preLoadbg.src = "css/bg/1.jpg";
+					} else {
+						preLoadbg.src = "css/bg/" + (num_bg + 1) + ".jpg";
+					}
+					next_bg = 0;
+				} else {
+					next_bg = next_bg + 1;
+				}
+				setTimeout(timedCount, 1000);
+			}
+
+			function autoLoad() {
+				var shapeTest = document.getElementById("shape");
+				if (hasClassName(shapeTest, "cube")) {
+					removeClassName(shapeTest, "cube");
+					addClassName(shapeTest, "autoLoad");
+				} else {
+					toggleShape();
+				}
+			}
+		</script>
+		<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="./js/snow.js"></script>
+		<script type="text/javascript" src="./js/ruoi.js"></script>
+		<script type="text/javascript" src="./js/player.js"></script>
+	</head>
+	<body onload="timedCount()">
+		<div id="container">
+			<div id="stage">
+				<div id="shape" class="cube backfaces">
+					<div class="plane one"></div>
+					<div class="plane two"></div>
+					<div class="plane three"></div>
+					<div class="plane four"></div>
+					<div class="plane five"></div>
+					<div class="plane six"></div>
+					<div class="plane seven"></div>
+					<div class="plane eight"></div>
+					<div class="plane nine"></div>
+					<div class="plane ten"></div>
+					<div class="plane eleven"></div>
+					<div class="plane twelve"></div>
+				</div>
 			</div>
-		</div>
 
-		<div class="mhn-player">
-			<div class="typewriter">
+			<div class="mhn-player">
+				<!-- <div class="typewriter">
 				<h2>
 					Chúc sinh nhật Châu nhaaa!
 				</h2>
-			</div>
-			<div class="album-art"></div>
-			<div class="play-list">
-				<a href="#" class="play"
-					data-id="1"
-					data-album=""
-					data-artist="Olly Murs"
-					data-title="That Girl"
-					data-albumart="audio/covers/that-girl.jpeg"
-					data-url="audio/That_Girl.mp3">
-				</a>
-
-				<a href="#" class="play"
-					data-id="2"
-					data-album=""
-					data-artist="Jason Mraz"
-					data-title="I'm Yours"
-					data-albumart="audio/covers/im-yours.jpeg"
-					data-url="audio/Im_Yours.mp3">
-				</a>
-
-				<a href="#" class="play"
-					data-id="4"
-					data-album=""
-					data-artist="Maroon 5"
-					data-title="Girls Like You"
-					data-albumart="audio/covers/girls-like-you.jpeg"
-					data-url="audio/Girls_Like_You.mp3">
-				</a>
-
-				<a href="#" class="play"
-					data-id="6"
-					data-album=""
-					data-artist="One Direction"
-					data-title="What Makes You Beautiful"
-					data-albumart="audio/covers/what-makes-you-beautiful.jpeg"
-					data-url="audio/What_Makes_You_Beautiful.mp3">
-				</a>
-
-				<a href="#" class="play"
-					data-id="7"
-					data-album=""
-					data-artist="911"
-					data-title="I Do"
-					data-albumart="audio/covers/i-do.jpeg"
-					data-url="audio/I_Do.mp3">
-				</a>
-
-				<a href="#" class="play"
-					data-id="8"
-					data-album=""
-					data-artist="Fiona Fung"
-					data-title="A Little Love"
-					data-albumart="audio/covers/a-little-love.jpeg"
-					data-url="audio/A_Little_Love.mp3">
-				</a>
+			</div> -->
+				<div class="typewriter">
+					<h2 >
+						<a
+							href=""
+							class="typewrite"
+							data-period="2000"
+							data-type='[ "Hi, Châu Puppy... ", "Chúc mừng sinh nhật nhaaa !", "Vẫn ngàn sao tỏa sáng nè", "Luôn xinh đẹp và tươi trẻ nhé", "Và gặp nhiều may mắn hơn đó." ]'
+						>
+							<span class="wrap"></span>
+						</a>
+					</h2>
 				
-				<a href="#" class="play"
-					data-id="9"
-					data-album=""
-					data-artist="Fiona Fung"
-					data-title="Proud Of You"
-					data-albumart="audio/covers/proud-of-you.jpeg"
-					data-url="audio/Proud_Of_You.mp3">
-				</a>
-				
-				<a href="#" class="play"
-					data-id="10"
-					data-album=""
-					data-artist="Shane Filan"
-					data-title="Beautiful In White"
-					data-albumart="audio/covers/beautiful-in-white.jpeg"
-					data-url="audio/Beautiful_In_White.mp3">
-				</a>
-			</div>
-			<div class="audio">
-				<audio id="player" class="music" data-id="1" autoplay><source src="./audio/That_Girl.mp3" type="audio/mpeg" /></audio>
-			</div>
-			<div class="current-info">
-				<div class="song-artist"></div>
-				<!-- <div class="song-album"></div> -->
-				<div class="song-title"></div>
-			</div>
-			<div class="controls">
-				<a href="#" class="toggle-play-list"><i class="fa fa-list-ul"></i></a>
-				<div class="duration clearfix">
-					<span class="pull-left play-position"></span>
-					<span class="pull-right"><span class="play-current-time">00:00</span> / <span class="play-total-time">00:00</span></span>
+
+				<script>
+					var TxtType = function (el, toRotate, period) {
+						this.toRotate = toRotate;
+						this.el = el;
+						this.loopNum = 0;
+						this.period = parseInt(period, 10) || 2000;
+						this.txt = "";
+						this.tick();
+						this.isDeleting = false;
+					};
+
+					TxtType.prototype.tick = function () {
+						var i = this.loopNum % this.toRotate.length;
+						var fullTxt = this.toRotate[i];
+
+						if (this.isDeleting) {
+							this.txt = fullTxt.substring(0, this.txt.length - 1);
+						} else {
+							this.txt = fullTxt.substring(0, this.txt.length + 1);
+						}
+
+						this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+						var that = this;
+						var delta = 200 - Math.random() * 100;
+
+						if (this.isDeleting) {
+							delta /= 2;
+						}
+
+						if (!this.isDeleting && this.txt === fullTxt) {
+							delta = this.period;
+							this.isDeleting = true;
+						} else if (this.isDeleting && this.txt === "") {
+							this.isDeleting = false;
+							this.loopNum++;
+							delta = 500;
+						}
+
+						setTimeout(function () {
+							that.tick();
+						}, delta);
+					};
+
+					window.onload = function () {
+						var elements = document.getElementsByClassName("typewrite");
+						for (var i = 0; i < elements.length; i++) {
+							var toRotate = elements[i].getAttribute("data-type");
+							var period = elements[i].getAttribute("data-period");
+							if (toRotate) {
+								new TxtType(elements[i], JSON.parse(toRotate), period);
+							}
+						}
+						// INJECT CSS
+						var css = document.createElement("style");
+						css.type = "text/css";
+						css.innerHTML =
+							".typewrite > .wrap { border-right: 0.08em solid #fff}";
+						document.body.appendChild(css);
+					};
+				</script>
+</div>
+				<div class="album-art"></div>
+				<div class="play-list">
+					<a
+						href="#"
+						class="play"
+						data-id="1"
+						data-album=""
+						data-artist="Olly Murs"
+						data-title="That Girl"
+						data-albumart="audio/covers/that-girl.jpeg"
+						data-url="audio/That_Girl.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="2"
+						data-album=""
+						data-artist="Jason Mraz"
+						data-title="I'm Yours"
+						data-albumart="audio/covers/im-yours.jpeg"
+						data-url="audio/Im_Yours.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="4"
+						data-album=""
+						data-artist="Maroon 5"
+						data-title="Girls Like You"
+						data-albumart="audio/covers/girls-like-you.jpeg"
+						data-url="audio/Girls_Like_You.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="6"
+						data-album=""
+						data-artist="One Direction"
+						data-title="What Makes You Beautiful"
+						data-albumart="audio/covers/what-makes-you-beautiful.jpeg"
+						data-url="audio/What_Makes_You_Beautiful.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="7"
+						data-album=""
+						data-artist="911"
+						data-title="I Do"
+						data-albumart="audio/covers/i-do.jpeg"
+						data-url="audio/I_Do.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="8"
+						data-album=""
+						data-artist="Fiona Fung"
+						data-title="A Little Love"
+						data-albumart="audio/covers/a-little-love.jpeg"
+						data-url="audio/A_Little_Love.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="9"
+						data-album=""
+						data-artist="Fiona Fung"
+						data-title="Proud Of You"
+						data-albumart="audio/covers/proud-of-you.jpeg"
+						data-url="audio/Proud_Of_You.mp3"
+					>
+					</a>
+
+					<a
+						href="#"
+						class="play"
+						data-id="10"
+						data-album=""
+						data-artist="Shane Filan"
+						data-title="Beautiful In White"
+						data-albumart="audio/covers/beautiful-in-white.jpeg"
+						data-url="audio/Beautiful_In_White.mp3"
+					>
+					</a>
 				</div>
-				<div class="progress"><div class="bar"></div></div>
-				<div class="action-button">
-					<a href="#" class="prev"><i class="fa fa-step-backward"></i></a>
-					<a href="#" class="play-pause"><i class="fa fa-pp"></i></a>
-					<a href="#" class="stop"><i class="fa fa-stop"></i></a>
-					<a href="#" class="next"><i class="fa fa-step-forward"></i></a>
-					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8" data-css="0.8">
+				<div class="audio">
+					<audio id="player" class="music" data-id="1" autoplay>
+						<source src="./audio/That_Girl.mp3" type="audio/mpeg" />
+					</audio>
+				</div>
+				<div class="current-info">
+					<div class="song-artist"></div>
+					<!-- <div class="song-album"></div> -->
+					<div class="song-title"></div>
+				</div>
+				<div class="controls">
+					<a href="#" class="toggle-play-list"><i class="fa fa-list-ul"></i></a>
+					<div class="duration clearfix">
+						<span class="pull-left play-position"></span>
+						<span class="pull-right"
+							><span class="play-current-time">00:00</span> /
+							<span class="play-total-time">00:00</span></span
+						>
+					</div>
+					<div class="progress"><div class="bar"></div></div>
+					<div class="action-button">
+						<a href="#" class="prev"><i class="fa fa-step-backward"></i></a>
+						<a href="#" class="play-pause"><i class="fa fa-pp"></i></a>
+						<a href="#" class="stop"><i class="fa fa-stop"></i></a>
+						<a href="#" class="next"><i class="fa fa-step-forward"></i></a>
+						<input
+							type="range"
+							class="volume"
+							min="0"
+							max="1"
+							step="0.1"
+							value="0.8"
+							data-css="0.8"
+						/>
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- <div class="audio">
+			<!-- <div class="audio">
 			<audio id="player" controls autoplay>
 				<source src="audio/That_Girl.mp3" type="audio/mpeg">
 			</audio>
 		</div> -->
-		<div class="author">
-			<button onclick="downloadLink()" class="fa fa-chevron-circle-right"> Muốn cảm ơn Teoo thì ấn vô đây nè</button>
+			<div class="author">
+				<button onclick="downloadLink()" class="fa fa-chevron-circle-right">
+					Muốn cảm ơn Teoo thì ấn vô đây nè
+				</button>
+			</div>
 		</div>
-	</div>
-	<script type="text/javascript">
-		/**
+		<script type="text/javascript">
+			/**
 		<--var audios = [
 			"audio/That_Girl.mp3",
 			"audio/Im_Yours.mp3",
@@ -286,9 +419,9 @@
 			music.play();       
 		}); 
 		*/
-		var firstPreload = new Image();
-		firstPreload.src = "css/bg/2.jpg";
-	</script>
-	<!--//[ https://www.facebook.com/tuantnc ]//-->
-</body>
+			var firstPreload = new Image();
+			firstPreload.src = "css/bg/2.jpg";
+		</script>
+		<!--//[ https://www.facebook.com/tuantnc ]//-->
+	</body>
 </html>

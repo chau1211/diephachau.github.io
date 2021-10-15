@@ -68,7 +68,7 @@ audio {
 }
 
 #shape {
-	-webkit-animation: spin 8s infinite linear;
+	-webkit-animation: spin 11s infinite linear; /* chuyển động ảnh */
 }
 
 @-webkit-keyframes spin {

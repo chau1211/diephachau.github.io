@@ -3,6 +3,7 @@
  * Tứn Lê 
  * https://fb.com/tuantnc
  */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
 	background-image: url(./bg/1.jpg);
@@ -381,12 +382,27 @@ audio {
 	z-index: 1;
 }
 .mhn-player .typewriter h2{
+	font-family: 'Montserrat', sans-serif;
 	margin-top: 2px; 
 	color: rgb(0, 231, 0); 
 	font-family:Times, serif;
 	font-size: 23px;
 }
-
+.mhn-player .typewriter h2 span.cursor {
+	display: inline-block;
+	background-color: #ccc;
+	animation: blink 1s infinite;
+}
+.mhn-player .typewriter h2 span.cursor.typing {
+	animation: none;
+}
+@keyframes blink {
+	0%  { background-color: #ccc; }
+	49% { background-color: #ccc; }
+	50% { background-color: transparent; }
+	99% { background-color: transparent; }
+	100%  { background-color: #ccc; }
+}
 
 .mhn-player .album-art,
 .mhn-player .album-thumb{
@@ -696,4 +712,6 @@ audio {
 .volume[data-css="0.9"]::-moz-range-track{background-size:90% 100%}
 .volume[data-css="1"]::-webkit-slider-runnable-track{background-size:100% 100%}
 .volume[data-css="1"]::-moz-range-track{background-size:100% 100%}
+
+
 
